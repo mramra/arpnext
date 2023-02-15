@@ -6,7 +6,6 @@ with open("requirements.txt") as f:
 # get version from __version__ variable in arpnext/__init__.py
 from arpnext import __version__ as version
 
-
 setup(
 	name="arpnext",
 	version=version,
