@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include arpnext *.css
+recursive-include arpnext *.csv
+recursive-include arpnext *.html
+recursive-include arpnext *.ico
+recursive-include arpnext *.js
+recursive-include arpnext *.json
+recursive-include arpnext *.md
+recursive-include arpnext *.png
+recursive-include arpnext *.py
+recursive-include arpnext *.svg
+recursive-include arpnext *.txt
+recursive-exclude arpnext *.pyc
