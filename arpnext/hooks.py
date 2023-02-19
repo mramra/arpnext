@@ -110,6 +110,12 @@ app_license = "MIT"
 #	}
 # }
 
+doc_events = {
+    "Employee": {
+	    "validate": "arpnext.arpnext.doc_event.employee_event.validate_branch"
+     }
+}
+
 # Scheduled Tasks
 # ---------------
 
