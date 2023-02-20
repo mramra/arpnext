@@ -110,11 +110,22 @@ app_license = "MIT"
 #	}
 # }
 
+#doc_events = {
+#    "Employee": {
+#	    "validate": "arpnext.arpnext.doc_event.employee_event.validate_branch"
+#     }
+#}
+doctype_js = {"Employee" : "public/js/employee.js"}
 doc_events = {
     "Employee": {
-	    "validate": "arpnext.arpnext.doc_event.employee_event.validate_branch"
-     }
+	    "validate": "arpnext.arpnext.doc_event.employee_event.validate_creat_task"
+     },
+     "Attendance": {
+		"validate": "arpnext.arpnext.doc_event.employee_event.validate_hours"
+	},
+	
 }
+
 
 # Scheduled Tasks
 # ---------------
