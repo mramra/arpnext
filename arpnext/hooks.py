@@ -123,7 +123,10 @@ doc_events = {
      "Attendance": {
 		"validate": "arpnext.arpnext.doc_event.employee_event.validate_hours"
 	},
-	
+    
+	  "Sales Invoice": {
+		"validate": "arpnext.arpnext.doc_event.sales_invoice.add_remarks"
+	},
 }
 
 
