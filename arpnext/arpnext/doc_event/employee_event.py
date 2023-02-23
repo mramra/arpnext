@@ -1,11 +1,20 @@
 import frappe
-from frappe.utils import time_diff_in_hours
+from frappe.utils import time_diff_in_hours,date_diff,nowdate
 
 def validate_branch(doc,method):
 	if doc.status == 'Left':
 		if not doc.branch:
 			frappe.throw('Must be Enter Reason For branch')
 
+def validate_date(doc,method):
+	doc.number_of_wives=0
+	doc.children=0
+	doc.number_of_years=int(float(date_diff(nowdate(), doc.date_of_joining))/365)
+	for x in doc.wives:
+		doc.number_of_wives =doc.number_of_wives+1
+	for y in doc.sons:
+		doc.children =doc.children+1
+	
 def validate_creat_task(doc,method):
 	if doc.status == 'Left':
 		task_doc=frappe.new_doc("Task")
@@ -19,6 +28,8 @@ def validate_hours(doc,method):
     else:
         doc.status = "Absent"
 
+
 @frappe.whitelist()
 def get_age(birth_day):
-	return 30
+	age=date_diff(nowdate(), birth_day)
+	return int(float(age)/365)
