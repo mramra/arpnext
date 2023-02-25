@@ -115,12 +115,16 @@ app_license = "MIT"
 #	    "validate": "arpnext.arpnext.doc_event.employee_event.validate_branch"
 #     }
 #}
-doctype_js = {"Employee" : "public/js/employee.js"}
+doctype_js = {"Employee" : "public/js/employee.js",
+              "Quotation" : "public/js/quotation.js",
+              
+              }
 doc_events = {
 	 "Employee": {"validate": "arpnext.arpnext.doc_event.employee_event.validate_creat_task"},
 	 "Employee": {"validate": "arpnext.arpnext.doc_event.employee_event.validate_date"},
      "Attendance": {"validate": "arpnext.arpnext.doc_event.employee_event.validate_hours"},
 	 "Sales Invoice": {"validate": "arpnext.arpnext.doc_event.sales_invoice.add_remarks"},
+     "Sales Invoice": {"validate": "arpnext.arpnext.doc_event.sales_invoice.check_pos"},
 }
 
 
