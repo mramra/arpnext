@@ -7,5 +7,6 @@ frappe.ui.form.on('Customer', {
 			frm.set_df_property("posa_discount", 'read_only',0);
 		}
 	
+        
 	}
 });
