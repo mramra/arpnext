@@ -98,6 +98,11 @@ app_license = "MIT"
 #	"ToDo": "custom_app.overrides.CustomToDo"
 # }
 
+#Edit def update_requested_qty
+override_doctype_class = {
+    "Purchase Order": "arpnext.arpnext.overrides.purchase_order.PurchaseOrder"
+    } 
+
 # Document Events
 # ---------------
 # Hook on document methods and events
@@ -117,7 +122,7 @@ app_license = "MIT"
 #}
 doctype_js = {"Employee" : "public/js/employee.js",
               "Quotation" : "public/js/quotation.js",
-              
+              "Customer" : "public/js/customer.js",
               }
 doc_events = {
 	 "Employee": {"validate": "arpnext.arpnext.doc_event.employee_event.validate_creat_task"},

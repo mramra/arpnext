@@ -28,7 +28,6 @@ def validate_hours(doc,method):
     else:
         doc.status = "Absent"
 
-
 @frappe.whitelist()
 def get_age(birth_day):
 	age=date_diff(nowdate(), birth_day)
